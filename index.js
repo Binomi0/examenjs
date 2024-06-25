@@ -1,12 +1,12 @@
-const personaje = {
-  fuerza: 50
-}
+const Personaje = require('./personaje')
+const Mochila = require('./items')
+const {lista1, lista2} = require('./constants')
 
-console.log(personaje)
+const mochila = new Mochila(lista1)
+const personajeA = new Personaje(1000, 10000, 300, mochila, 'Personaje 1')
+const personajeB = new Personaje(500, 5000, 150, mochila, 'Personaje 2')
 
-function addPower (value) {
-  personaje.fuerza = personaje.fuerza + value
-}
-addPower(25)
-console.log(personaje.fuerza)
+personajeA.velocidad
 
+console.log(personajeA)
+console.log(personajeB)
