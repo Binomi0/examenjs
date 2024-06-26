@@ -7,5 +7,14 @@ class Mochila {
   
     }
   }
+
+  class Mochila2 {
+    constructor(objetos) {
+      this.soda = objetos.find(_item => _item.type === 'soda').value
+      this.flixo = objetos.find(_item => _item.type === 'flixo').value
+      this.armas = objetos.find(_item => _item.type === 'armas').value
   
-  module.exports = Mochila
+    }
+  }
+  
+  module.exports = {Mochila, Mochila2}

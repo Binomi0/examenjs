@@ -1,10 +1,11 @@
 class Personaje {
-    constructor(fuerza, vida, velocidad, mochila, name) {
+    constructor(fuerza, vida, velocidad, mochila, name, mochila2) {
       this.fuerza = fuerza
       this.vida = vida
       this.velocidad = velocidad
       this.mochila = mochila
       this.name = name
+      this.mochila2 = mochila2
     }
   
     addPower(value) {
