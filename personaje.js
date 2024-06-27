@@ -5,7 +5,6 @@ class Personaje {
       this.velocidad = velocidad
       this.mochila = mochila
       this.name = name
-      this.mochila2 = mochila2
     }
   
     addPower(value) {
@@ -18,7 +17,13 @@ class Personaje {
       this.velocidad = this.velocidad + value;
     }
     extractPower(value) {
-      this.fuerza = this.fuerza - value;
+      if (this.fuerza < 100) return
+      const nuevaFuerza = this.fuerza - value
+      if (nuevaFuerza >= 100) {
+        this.fuerza = nuevaFuerza
+      } else {
+        this.fuerza = 100
+      }
     }
     basicHit(hit) {
       if (this.vida < 1) return
@@ -33,10 +38,15 @@ class Personaje {
       }
     }
     extractSpeed(value) {
-      this.velocidad = this.velocidad - value;
+      if (this.velocidad < 100) return
+      const nuevaVelocidad = this.velocidad - value
+      if (nuevaVelocidad >= 100) {
+        this.velocidad = nuevaVelocidad
+      } else {
+        this.velocidad = 100
+      }
     }
-  
-  
+
   }
 
   module.exports = Personaje
